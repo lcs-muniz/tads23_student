@@ -4,5 +4,5 @@ import 'package:tads23_student/domain/entities/student_tads_entidy.dart';
 
 abstract class StudentRepositoryContract {
   Future<Result<StudentRepositoryContract, Failure>> getStudent();
-  Future<Result<void, Failure>> saveStudent(StudantTadsEntidy student);
+  Future<Result<void, Failure>> saveStudent(StudentTadsEntidy student);
 }

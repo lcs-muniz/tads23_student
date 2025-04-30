@@ -4,6 +4,6 @@ import 'package:tads23_student/domain/entities/student_tads_entidy.dart';
 
 
 abstract class LocalStorageContract {
-  Future<Result<StudantTadsEntidy,Failure>> fetchStudent();
-  Future<Result<void,Failure>> saveStudent(StudantTadsEntidy student);
+  Future<Result<StudentTadsEntidy,Failure>> fetchStudent();
+  Future<Result<void,Failure>> saveStudent(StudentTadsEntidy student);
 }
