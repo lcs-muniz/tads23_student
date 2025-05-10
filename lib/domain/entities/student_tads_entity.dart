@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-class StudentTadsEntidy {
+class StudentTadsEntity {
   final String name;
   final int age;
   final String email;
   final String address;
   final String phone;
 
-  StudentTadsEntidy({
+  StudentTadsEntity({
     required this.name,
     required this.age,
     required this.email,
@@ -15,8 +15,8 @@ class StudentTadsEntidy {
     required this.phone,
   });
 
-  factory StudentTadsEntidy.sampleInfo() {
-    return StudentTadsEntidy(
+  factory StudentTadsEntity.sampleInfo() {
+    return StudentTadsEntity(
       name: 'Martin Luther King Jr.',
       age: 20,
       email: 'marting.lkjr@gmail.com',
@@ -25,14 +25,14 @@ class StudentTadsEntidy {
     );
   }
 
-  StudentTadsEntidy copyWith({
+  StudentTadsEntity copyWith({
     String? name,
     int? age,
     String? email,
     String? address,
     String? phone,
   }) {
-    return StudentTadsEntidy(
+    return StudentTadsEntity(
       name: name ?? this.name,
       age: age ?? this.age,
       email: email ?? this.email,
@@ -51,8 +51,8 @@ class StudentTadsEntidy {
     };
   }
 
-  factory StudentTadsEntidy.fromMap(Map<String, dynamic> map) {
-    return StudentTadsEntidy(
+  factory StudentTadsEntity.fromMap(Map<String, dynamic> map) {
+    return StudentTadsEntity(
       name: map['name'],
       age: map['age'],
       email: map['email'],
@@ -63,19 +63,19 @@ class StudentTadsEntidy {
 
   String toJson() => json.encode(toMap());
 
-  factory StudentTadsEntidy.fromJson(String source) =>
-      StudentTadsEntidy.fromMap(json.decode(source));
+  factory StudentTadsEntity.fromJson(String source) =>
+      StudentTadsEntity.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'StudentTadsEntidy(name: $name, age: $age, email: $email, address: $address, phone: $phone)';
+    return 'StudentTadsEntity(name: $name, age: $age, email: $email, address: $address, phone: $phone)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is StudentTadsEntidy &&
+    return other is StudentTadsEntity &&
         other.name == name &&
         other.age == age &&
         other.email == email &&
