@@ -3,6 +3,6 @@ import 'package:tads23_student/common/patterns/result.dart';
 import 'package:tads23_student/domain/entities/student_tads_entity.dart';
 
 abstract class StudentRepositoryContract {
-  Future<Result<StudentRepositoryContract, Failure>> getStudent();
+  Future<Result<StudentTadsEntity, Failure>> getStudent();
   Future<Result<void, Failure>> saveStudent(StudentTadsEntity student);
 }
